@@ -1,3 +1,5 @@
+package com.java.workshop.basics;
+
 public class array {
     
     public static void main(String[] args){

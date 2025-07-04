@@ -62,15 +62,16 @@ public class location {
         this.postalcode = postalcode;
     }
 
-    public void printDetails() {
-        System.out.println("Location Name: " + name);
-        System.out.println("Latitude: " + latitude);
-        System.out.println("Longitude: " + longitude);
-        System.out.println("Description: " + description);
-        System.out.println("Country: " + country);
-        System.out.println("City: " + city);
-        System.out.println("Address: " + address);
-        System.out.println("Postal Code: " + postalcode);
+    @Override
+    public String toString(){
+        return "Location{name = " + name + 
+               ", latitude = " + latitude + 
+               ", longitude = " + longitude + 
+               ", description = " + description + 
+               ", country = " + country + 
+               ", city = " + city + 
+               ", address = " + address + 
+               ", postalcode = " + postalcode + "}";
     }
 }
 
