@@ -1,6 +1,11 @@
 package com.java.workshop.basics;
 
-public class stringexample {
+import java.io.FileReader;
+
+public class stringExample{
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         String firstname = "shahul";
         String lastname = "hameedkhan";
@@ -13,14 +18,9 @@ public class stringexample {
 
         System.out.println(firstname == lastname);
 
-        String sentence = "My name is shahul and I am learning Java. Welcome to java class.";
-
-
-        String[] words = sentence.split(" ");
-        System.out.println("Number of words: " + words.length);
-        String[] sentences = sentence.split("\\.");
-        System.out.println("Number of sentences: " + sentences.length);
-        int totalChars = sentence.length();
-        System.out.println("Total characters: " + totalChars);
-    }
+        String sentence = "My name is  shahul and I am learning Java.";
+        String word[] = sentence.split(" ");
+        
+        System.out.println("Word count: " + word.length);
+  }
 }
