@@ -33,11 +33,13 @@ public class zone {
     public void setDimension(Double dimension) {
         this.dimension = dimension;
     }
-    public void printDetails() {
-        System.out.println("Zone ID: " + id);
-        System.out.println("Zone Name: " + name);
-        System.out.println("Zone Type: " + type);
-        System.out.println("Zone Dimension: " + dimension);
+    @Override
+    public String toString() {
+        return "Zone{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", type='" + type + '\'' +
+                ", dimension=" + dimension +
+                '}';
     }
 }
-
