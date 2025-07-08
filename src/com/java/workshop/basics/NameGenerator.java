@@ -11,7 +11,7 @@ public class NameGenerator {
 
         System.out.print("Enter your age: ");
         int age = scan.nextInt();
-        scan.nextLine(); 
+        scan.nextLine();
 
         System.out.print("Enter your qualification: ");
         String qualification = scan.nextLine();
@@ -25,15 +25,18 @@ public class NameGenerator {
         } else if (gender.equals("female")) {
             title = "Mrs";
         } else {
-            title = "";
+            title = "Mx";
         }
 
-        System.out.println("Output:");
-        System.out.println(title + " " + name + " (" + age + ") " + qualification);
+        StringBuilder output = new StringBuilder();
+        output.append(title).append(". ");
+        output.append(name).append(" (").append(age).append(") - ");
+        output.append(qualification);
+
+        System.out.println("\nOutput:");
+        System.out.println(output.toString());
 
         scan.close();
     }
-}
-
-    
+    }
 
