@@ -10,7 +10,14 @@ public class WordCountTest {
    @Test
    public void testWordCount(){
     WordCount wordCount = new WordCount();
-    int count = wordCount.countWords("this is the first prg to test");
+    int count = wordCount.count("this is the first prg to test");
+    assertEquals(7, count);
+   }
+
+   @Test
+   public void testWordCountWithEmptyString(){
+    WordCount wordCount = new WordCount();
+    int count = wordCount.count("hello guys welcome to the java workshop");
     assertEquals(7, count);
    }
 }
