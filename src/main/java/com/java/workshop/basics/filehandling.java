@@ -1,6 +1,5 @@
 package com.java.workshop.basics;
 import java.io.File;
-import java.io.IOException;
 
 public class filehandling {
     public static void main(String[] args){

@@ -1,6 +1,5 @@
 package com.java.workshop.basics;
 
-import java.io.FileReader;
 
 public class stringExample{
     /**

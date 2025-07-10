@@ -1,5 +1,4 @@
 package com.java.workshop.standardlib;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,9 +13,9 @@ public class FileCopyUsingBinary {
             while ((bytesRead = inputStream.read(chunk)) != -1) {
                 outputStream.write(chunk, 0, bytesRead);
             }
-        
+
         } catch (IOException e) {
-            System.err.println("there is error in reading and writing the file:");  
+            System.err.println("there is error in reading and writing the file:");
         }
     }
 }
