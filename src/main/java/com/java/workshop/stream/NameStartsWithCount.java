@@ -14,13 +14,11 @@ public class NameStartsWithCount {
         names.add("santhosh");
         names.add("nowfiya");
 
-
-       long nameCount = names.stream().filter( name -> name.startsWith("s")).count();
-       if(nameCount > 0) {
-            System.out.println("Number of names starting with 's': " + nameCount);
-        } else {
-            System.out.println("No names start with 's'.");
-        }
+        names.stream()
+             .filter(name -> name.startsWith("s"))
+             .map(String::toUpperCase)
+             .forEach(System.out::println);
+        names.stream().distinct().map(String::toUpperCase).forEach(System.out::println);
 
     }
 }
