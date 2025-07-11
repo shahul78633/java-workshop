@@ -1,5 +1,6 @@
 package com.java.workshop.collections;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class StudentMap {
