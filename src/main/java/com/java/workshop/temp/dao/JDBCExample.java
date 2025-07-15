@@ -1,32 +1,37 @@
 package com.java.workshop.temp.dao;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import com.java.workshop.temp.beans.Organization;
+import com.java.workshop.temp.bin.Orgranaization;
 
 public class JDBCExample {
 
     public static void main(String[] args) {
+
         Connection connection = null;
-        try{
+        try {
             Class.forName("org.h2.Driver");
-        }catch (Exception e){
+
+        
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        try{
-            connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", null);
-        }catch (SQLException SQLException){
-            System.out.println("Error creating table " + SQLException);
+        try {
+            connection=DriverManager.getConnection("jdbc:h2:mem:tempdatadb", "sa", null);
+        } catch (SQLException sqlException) {
+           System.out.println("Error creating table:" + sqlException);
         }
-
-        OrganizationDao  organizationDao = new OrganizationDao();
+        OrganizationDao organizationDao = new OrganizationDao();
         organizationDao.createTable(connection);
-        Organization vet = new Organization("vet","thindal,Erode",94894408,
-        "vetal@gmail.com","www.vetias.com",78656786,null);
-        organizationDao.save(connection,vet);
+        Orgranaization vet = new Orgranaization("VET","Thindal, Erode",
+        1234567890,"vetias@gmail.com","www.vetias.com",
+        98766543,null);
         
+        organizationDao.save(connection,vet);
 
-    }
+       Orgranaization myOrgranaization = organizationDao.findByName(connection, "VET");
+       System.out.println("My Organization is:" + myOrgranaization);
 
-
+    } 
 }
