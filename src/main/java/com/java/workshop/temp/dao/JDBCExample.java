@@ -2,7 +2,7 @@ package com.java.workshop.temp.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import com.java.workshop.temp.beans.OrganizationDao;
+import com.java.workshop.temp.beans.Organization;
 
 public class JDBCExample {
 
@@ -21,7 +21,9 @@ public class JDBCExample {
 
         OrganizationDao  organizationDao = new OrganizationDao();
         organizationDao.createTable(connection);
-        Organization vet = new Organization("VET"
+        Organization vet = new Organization("vet","thindal,Erode",94894408,
+        "vetal@gmail.com","www.vetias.com",78656786,null);
+        organizationDao.save(connection,vet);
         
 
     }
